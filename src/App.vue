@@ -1,28 +1,68 @@
 <template>
-  <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
-  </div>
+  <v-app>
+
+    <v-toolbar
+  >
+    <v-toolbar-title>Title</v-toolbar-title>
+
+    <v-divider
+      class="mx-3"
+      inset
+      vertical
+    ></v-divider>
+
+    <span class="subheading">My Home</span>
+
+    <v-divider
+      class="mx-3"
+      inset
+      vertical
+    ></v-divider>
+
+    <span class="subheading">My Home</span>
+    <v-spacer></v-spacer>
+
+    <v-toolbar-items>
+      <v-btn flat>
+        News
+      </v-btn>
+
+      <v-divider vertical></v-divider>
+
+      <v-btn flat>
+        Blog
+      </v-btn>
+
+      <v-divider vertical></v-divider>
+
+      <v-btn flat>
+        Music
+      </v-btn>
+
+      <v-divider vertical></v-divider>
+    </v-toolbar-items>
+
+    <v-toolbar-side-icon></v-toolbar-side-icon>
+  </v-toolbar>
+
+    <v-content>
+      <HelloWorld/>
+    </v-content>
+  </v-app>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import HelloWorld from './components/HelloWorld'
 
 export default {
-  name: 'app',
+  name: 'App',
   components: {
     HelloWorld
+  },
+  data () {
+    return {
+      //
+    }
   }
 }
 </script>
-
-<style>
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
-</style>
