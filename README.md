@@ -1,5 +1,8 @@
 # coinmarket
 
+[![Build Status](https://travis-ci.org/dessHub/cmarket.svg?branch=develop)](https://travis-ci.org/dessHub/cmarket)
+
+
 ## Project setup
 ```
 npm install
