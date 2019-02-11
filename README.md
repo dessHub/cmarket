@@ -1,6 +1,7 @@
 # coinmarket
 
 [![Build Status](https://travis-ci.org/dessHub/cmarket.svg?branch=develop)](https://travis-ci.org/dessHub/cmarket)
+[![Coverage Status](https://coveralls.io/repos/github/dessHub/cmarket/badge.svg)](https://coveralls.io/github/dessHub/cmarket)
 
 
 ## Project setup
