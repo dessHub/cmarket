@@ -46,7 +46,7 @@
   </v-toolbar>
 
     <v-content>
-      <HelloWorld/>
+      <HelloWorld msg='hello world! hjh '/>
     </v-content>
   </v-app>
 </template>
