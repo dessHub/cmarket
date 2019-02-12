@@ -3,7 +3,7 @@
 
     <v-toolbar
   >
-    <v-toolbar-title>Title</v-toolbar-title>
+    <v-toolbar-title>cMarket</v-toolbar-title>
 
     <v-divider
       class="mx-3"
@@ -11,7 +11,7 @@
       vertical
     ></v-divider>
 
-    <span class="subheading">My Home</span>
+    <span class="subheading">Toplist</span>
 
     <v-divider
       class="mx-3"
@@ -19,7 +19,7 @@
       vertical
     ></v-divider>
 
-    <span class="subheading">My Home</span>
+    <span class="subheading">Exchanges</span>
     <v-spacer></v-spacer>
 
     <v-toolbar-items>
@@ -34,35 +34,32 @@
       </v-btn>
 
       <v-divider vertical></v-divider>
-
-      <v-btn flat>
-        Music
-      </v-btn>
-
-      <v-divider vertical></v-divider>
     </v-toolbar-items>
 
     <v-toolbar-side-icon></v-toolbar-side-icon>
   </v-toolbar>
 
     <v-content>
-      <HelloWorld msg='hello world! hjh '/>
+      <Coins />
     </v-content>
   </v-app>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld'
+import Coins from './components/Coins'
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
+   Coins 
+  },
+  created() {
+    this.$store.dispatch('coins/getCoins');
   },
   data () {
     return {
       //
     }
-  }
+  },
 }
 </script>
