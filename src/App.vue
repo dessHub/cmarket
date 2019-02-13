@@ -3,7 +3,7 @@
 
     <v-toolbar
   >
-    <v-toolbar-title>cMarket</v-toolbar-title>
+  <v-toolbar-title><router-link to='/'>cMarket</router-link></v-toolbar-title>
 
     <v-divider
       class="mx-3"
@@ -40,19 +40,15 @@
   </v-toolbar>
 
     <v-content>
-      <Coins />
+      <router-view />
     </v-content>
   </v-app>
 </template>
 
 <script>
-import Coins from './components/Coins'
 
 export default {
   name: 'App',
-  components: {
-   Coins 
-  },
   created() {
     this.$store.dispatch('coins/getCoins');
   },
