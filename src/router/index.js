@@ -2,6 +2,7 @@ import Vue from 'vue';
 import VueRouter from 'vue-router';
 
 import Coins from '../components/Coins'
+import Toplist from '../components/Toplist'
 import Test from '../components/HelloWorld';
 
 Vue.use(VueRouter);
@@ -11,6 +12,10 @@ const router = new VueRouter({
     {
       path: '/',
       component: Coins,
+    },
+    {
+      path: '/toplist',
+      component: Toplist,
     },
     {
       path: '/test',
