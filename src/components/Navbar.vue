@@ -10,7 +10,7 @@
       vertical
     ></v-divider>
 
-    <span class="subheading"><router-link to='/toplist'>Toplist</router-link></span>
+    <span class="subheading"><router-link to='/allcoins'>Toplist</router-link></span>
 
     <v-divider
       class="mx-3"
