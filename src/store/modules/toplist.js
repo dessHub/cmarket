@@ -1,4 +1,4 @@
-import axios from 'axios';
+import api from '../../utils/api';
 
 export default {
   namespaced: true,
@@ -9,13 +9,12 @@ export default {
     toplist: null,
   },
   actions: {
-    getToplist({ commit }) {
+    async getToplist({ commit }) {
      commit('fetchingToplist');
-     axios.get('https://min-api.cryptocompare.com/data/top/mktcapfull?limit=100&tsym=USD')
-     .then(response => {
-       commit('addToplistToStore', response.data.Data);
-     })
-     .catch(error => commit('fetchingToplistFailed', error));
+     const data = await api.get('data/top/mktcapfull?limit=100&tsym=USD')
+     data.Message === 'Success' ? 
+       commit('addToplistToStore', data.Data) :
+       commit('fetchingToplistFailed', data.Message);
     },
   },
   mutations: {
@@ -27,7 +26,7 @@ export default {
     fetchingToplist(state) {
       state.isFetching = true;
     },
-    fetchingToplistFailedt(state, error) {
+    fetchingToplistFailed(state, error) {
       state.isFetching = false;
       state.success = false;
       state.errorMessage = error;

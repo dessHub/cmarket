@@ -42,7 +42,6 @@ export default {
   props: [],
   data: () => ({
         pagination: {
-          sortBy: 'PRICE',
           rowsPerPage: 25,
         },
         headers: [

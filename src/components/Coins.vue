@@ -14,7 +14,8 @@
     <div v-else>
       <v-data-table
        :headers="headers"
-       :items="getCoins"
+        :items="getCoins"
+        :pagination.sync="pagination"
        class="elevation-1"
       >
 
@@ -38,7 +39,13 @@ import { mapState, mapGetters } from 'vuex';
 
 export default {
   props: [],
+  created() {
+    this.$store.dispatch('coins/getCoins');
+  },
   data: () => ({
+        pagination: {
+          rowsPerPage: 25,
+        },
         headers: [
           { text: 'Sort Order', value: 'SortOrder' },
           {

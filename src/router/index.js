@@ -11,11 +11,11 @@ const router = new VueRouter({
   routes: [
     {
       path: '/',
-      component: Coins,
+      component: Toplist,
     },
     {
-      path: '/toplist',
-      component: Toplist,
+      path: '/allcoins',
+      component: Coins,
     },
     {
       path: '/test',

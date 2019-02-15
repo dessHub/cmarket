@@ -1,21 +1,22 @@
-import axios from 'axios';
+import api from '../../utils/api';
 
 export default {
   namespaced: true,
   state: {
     coins: null,
     isFetching: false,
+    success: false,
+    errorMessage: null
   },
   actions: {
-    getCoins({ commit }) {
+    async getCoins({ commit }) {
       commit('fetchingCoins');
-      axios.get('https://min-api.cryptocompare.com/data/all/coinlist')
-      .then(response => {
-        console.log("ghjdhgjf");
-        commit('addCoinsToStore', response.data.Data);
-      })
-      .catch(console.error);
-    }
+      let data = await api.get('data/all/coinlist');
+      data.Response === 'Success' ? 
+        commit('addCoinsToStore', data.Data) : 
+        commit('fetchingCoinsFail', data.Message);
+    },
+
   },
   mutations: {
     addCoinsToStore(state, coins) {
@@ -24,6 +25,11 @@ export default {
     },
     fetchingCoins(state){
       state.isFetching = true;
+    },
+    fetchingCoinsFail(state, error){
+      state.isFetching = false;
+      state.success = false;
+      state.errorMessage = error;
     }
   },
   getters: {
