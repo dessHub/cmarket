@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1550588878356" clover="3.2.0">
-  <project timestamp="1550588878356" name="All files">
-    <metrics statements="59" coveredstatements="10" conditionals="8" coveredconditionals="0" methods="8" coveredmethods="0" elements="75" coveredelements="10" complexity="0" loc="59" ncloc="59" packages="7" files="10" classes="10">
+<coverage generated="1550589775729" clover="3.2.0">
+  <project timestamp="1550589775729" name="All files">
+    <metrics statements="59" coveredstatements="11" conditionals="8" coveredconditionals="0" methods="8" coveredmethods="0" elements="75" coveredelements="11" complexity="0" loc="59" ncloc="59" packages="7" files="10" classes="10">
       <package name="src">
         <metrics statements="2" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
         <file name="App.vue" path="/Users/korirdesmond/Documents/projects/vue/coinmarket/src/App.vue">
@@ -71,7 +71,7 @@
         </file>
       </package>
       <package name="src.store.modules">
-        <metrics statements="22" coveredstatements="7" conditionals="6" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        <metrics statements="22" coveredstatements="8" conditionals="6" coveredconditionals="0" methods="0" coveredmethods="0"/>
         <file name="coins.js" path="/Users/korirdesmond/Documents/projects/vue/coinmarket/src/store/modules/coins.js">
           <metrics statements="11" coveredstatements="0" conditionals="4" coveredconditionals="0" methods="0" coveredmethods="0"/>
           <line num="1" count="0" type="stmt"/>
@@ -87,7 +87,7 @@
           <line num="37" count="0" type="cond" truecount="0" falsecount="2"/>
         </file>
         <file name="toplist.js" path="/Users/korirdesmond/Documents/projects/vue/coinmarket/src/store/modules/toplist.js">
-          <metrics statements="11" coveredstatements="7" conditionals="2" coveredconditionals="0" methods="0" coveredmethods="0"/>
+          <metrics statements="11" coveredstatements="8" conditionals="2" coveredconditionals="0" methods="0" coveredmethods="0"/>
           <line num="13" count="0" type="stmt"/>
           <line num="14" count="0" type="stmt"/>
           <line num="15" count="0" type="cond" truecount="0" falsecount="2"/>
@@ -98,7 +98,7 @@
           <line num="30" count="1" type="stmt"/>
           <line num="31" count="1" type="stmt"/>
           <line num="32" count="1" type="stmt"/>
-          <line num="37" count="0" type="stmt"/>
+          <line num="37" count="1" type="stmt"/>
         </file>
       </package>
       <package name="src.utils">
