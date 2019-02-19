@@ -36,7 +36,7 @@
 </template>
 
 <script>
-import { mapActions, mapState, mapGetters } from 'vuex';
+import { mapState, mapGetters } from 'vuex';
 
 export default {
   props: [],
@@ -61,7 +61,7 @@ export default {
         value: 0
   }),
   created() {
-    this.getToplist;
+    this.$store.dispatch('toplist/getToplist');
   },   
   computed: {
   ...mapState({
@@ -72,7 +72,6 @@ export default {
     {
       getToplist: 'getToplist'
     }), 
-    ...mapActions({ getTopList: 'toplist/getToplist'})
  },
 }
 </script>
