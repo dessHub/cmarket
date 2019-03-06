@@ -1,7 +1,6 @@
 import api from '../../utils/api';
 
 export default {
-  namespaced: true,
   state: {
     coins: null,
     isFetching: false,

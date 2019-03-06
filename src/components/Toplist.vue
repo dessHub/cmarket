@@ -68,11 +68,11 @@ export default {
     isFetching: state => state.toplist.isFetching,
     toplist: state => state.toplist.toplist,
   }),
-  ...mapGetters('toplist',
+  ...mapGetters(
   {
     getToplist: 'getToplist'
   }), 
-  ...mapActions({getToplistAction: 'toplist/getToplist'})
+  ...mapActions( {getToplistAction: 'getToplist'})
  },
 }
 </script>

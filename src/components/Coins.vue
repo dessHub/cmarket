@@ -40,7 +40,7 @@ import { mapState, mapGetters } from 'vuex';
 export default {
   props: [],
   created() {
-    this.$store.dispatch('coins/getCoins');
+    this.$store.dispatch('getCoins');
   },
   data: () => ({
         pagination: {
@@ -77,7 +77,7 @@ export default {
       isFetching: state => state.coins.isFetching,
     }),
     ...mapGetters(
-      'coins', {getCoins: 'convertCoinsObjToArray'}
+      {getCoins: 'convertCoinsObjToArray'}
     )
   }
 }

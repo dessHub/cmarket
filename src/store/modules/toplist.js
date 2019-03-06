@@ -1,7 +1,6 @@
 import api from '../../utils/api';
 
 export default {
-  namespaced: true,
   state: {
     isFetching: false,
     success: false,
