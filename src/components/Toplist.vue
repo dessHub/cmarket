@@ -36,7 +36,7 @@
 </template>
 
 <script>
-import { mapState, mapGetters } from 'vuex';
+import { mapState, mapGetters, mapActions } from 'vuex';
 
 export default {
   props: [],
@@ -61,17 +61,18 @@ export default {
         value: 0
   }),
   created() {
-    this.$store.dispatch('toplist/getToplist');
+    this.getToplistAction;
   },   
   computed: {
   ...mapState({
     isFetching: state => state.toplist.isFetching,
     toplist: state => state.toplist.toplist,
   }),
-    ...mapGetters('toplist',
-    {
-      getToplist: 'getToplist'
-    }), 
+  ...mapGetters(
+  {
+    getToplist: 'getToplist'
+  }), 
+  ...mapActions( {getToplistAction: 'getToplist'})
  },
 }
 </script>
