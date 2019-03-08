@@ -1,4 +1,5 @@
 import api from '../../utils/api';
+import { appendBaseUrl } from '../../utils/helper';
 
 export default {
   state: {
@@ -33,7 +34,7 @@ export default {
   },
   getters: {
     getToplist(state){
-      return state.toplist;
+      return state.toplist.map(toplist => appendBaseUrl(toplist));
     },
   },
 }
