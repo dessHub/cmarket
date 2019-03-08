@@ -23,12 +23,12 @@
           slot="items" 
           slot-scope="props"
       >
-       <td class="text-xs-right">{{ props.item.SortOrder }}</td>
+       <td class="text-xs-left">{{ props.item.SortOrder }}</td>
+       <td class="text-xs-left"><img :src="props.item.ImageUrl" /></td>
         <td>{{ props.item.CoinName }}</td>
-        <td class="text-xs-right">{{ props.item.FullName }}</td>
-        <td class="text-xs-right">{{ props.item.ProofType }}</td>
-        <td class="text-xs-right">{{ props.item.ImageUrl }}</td>
-        <td class="text-xs-right">{{ props.item.IsTrading }}</td>
+        <td class="text-xs-left">{{ props.item.FullName }}</td>
+        <td class="text-xs-left">{{ props.item.ProofType }}</td>
+        <td class="text-xs-left">{{ props.item.IsTrading }}</td>
       </template>
      </v-data-table>
    </div>
@@ -48,6 +48,7 @@ export default {
         },
         headers: [
           { text: 'Sort Order', value: 'SortOrder' },
+          { text: 'Image Url', value: 'ImageUrl' },
           {
             text: 'Coin Name',
             align: 'left',
@@ -56,7 +57,6 @@ export default {
           },
           { text: 'Full Name', value: 'FullName' },
           { text: 'Proof Type', value: 'ProofType' },
-          { text: 'Image Url', value: 'ImageUrl' },
           { text: 'IsTrading', value: 'IsTrading' }
         ],
         interval: {},
@@ -85,4 +85,7 @@ export default {
 <style lang="stylus" scoped>
   .v-progress-circular
     margin: 1rem
+
+  img
+    width: 30px
 </style>

@@ -23,8 +23,8 @@
           slot="items" 
           slot-scope="props"
       >
-       <td class="text-xs-left">{{ props.item.CoinInfo.FullName }}</td>
-        <td class="text-xs-left">{{ props.item.CoinInfo.Name }}</td>
+      <td class="text-xs-left"><img :src="props.item.RAW.USD.IMAGEURL" /> {{
+        props.item.CoinInfo.FullName }} ({{ props.item.CoinInfo.Name }} )</td>
         <td class="text-xs-left">{{ props.item.DISPLAY.USD.PRICE }}</td>
         <td class="text-xs-left">{{ props.item.DISPLAY.USD.LASTVOLUMETO }}</td>
         <td class="text-xs-left">{{ props.item.DISPLAY.USD.VOLUMEDAYTO }}</td>
@@ -45,13 +45,7 @@ export default {
           rowsPerPage: 25,
         },
         headers: [
-          { text: 'Full Name', value: 'FullName' },
-          {
-            text: 'Short Name',
-            align: 'left',
-            sortable: false,
-            value: 'Name'
-          },
+          { text: 'Name', value: 'FullName' },
           { text: 'Price', value: 'Price' },
           { text: 'LAST VOLUME TO', value: 'LASTVOLUMETO' },
           { text: 'Volume Day To', value: 'VOLUMEDAYTO' },
@@ -76,5 +70,11 @@ export default {
  },
 }
 </script>
-<style>
+<style lang="stylus" scoped>
+  .v-progress-circular
+    margin: 1rem
+
+  img
+    width: 15px
+    margin-right: 10px
 </style>

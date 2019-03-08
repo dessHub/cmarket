@@ -1,4 +1,5 @@
 import api from '../../utils/api';
+import { appendBaseUrl } from '../../utils/helper';
 
 export default {
   state: {
@@ -33,7 +34,8 @@ export default {
   },
   getters: {
     convertCoinsObjToArray({ coins }){
-      return coins ? Object.values(coins) : {};
+      return coins ? Object.values(coins).map(coin => appendBaseUrl(coin)): {};
     }
   }
 }
+
